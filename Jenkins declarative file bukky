@@ -31,18 +31,13 @@ pipeline{
     } 
     stage('8deploy2prod'){
       steps{
-        deploy adapters: [tomcat9(credentialsId: 'tomcatcredentials', path: '', url: 'http://3.235.93.70:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://35.153.68.186:8080/')], contextPath: null, war: 'target/*war'
       } 
     }
   }
     post{
     success{
-      emailext body: '''hello guys,
-
-good job, build and deployment successful.
-
-Regards
-Bukky''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'sucess', to: 'adepoju.bukola@live.com'
+      emailext body: 'hello, please check', recipientProviders: [buildUser(), culprits(), contributor()], subject: 'check', to: 'adepoju.bukola@live.com'
     }
     always{
       emailext body: '''hello guys,
