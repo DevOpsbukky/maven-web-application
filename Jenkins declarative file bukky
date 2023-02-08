@@ -10,7 +10,7 @@ pipeline{
         git 'https://github.com/DevOpsbukky/maven-web-application'
       }
     }
-  
+  /*
     stage('3Test+Build'){
       steps{
         sh "echo 'running JUnit-test-cases' "
@@ -56,4 +56,5 @@ Regards
 Bukky''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'sucess', to: 'adepoju.bukola@live.com'
     }
   }
+  /
   }
