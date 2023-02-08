@@ -56,5 +56,5 @@ Regards
 Bukky''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'sucess', to: 'adepoju.bukola@live.com'
     }
   }
-  /
+  */
   }
